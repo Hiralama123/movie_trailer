@@ -1,0 +1,174 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Top Movie Trailers</title>
+  <style>
+    body {
+      background-color: #1a1a2e;
+      color: white;
+      font-family: Georgia, serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav {
+      background-color: #e94560;
+      padding: 14px 0;
+      text-align: center;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-family: Arial, sans-serif;
+      font-size: 18px;
+      font-weight: bold;
+      margin: 0 30px;
+      letter-spacing: 1px;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .page-content {
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 30px 20px;
+      text-align: center;
+    }
+
+    .movie {
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    .movie h2 {
+      color: #e94560;
+      font-size: 26px;
+      margin-bottom: 10px;
+    }
+
+    .movie img {
+      width: 300px;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+      border: 3px solid #e94560;
+      cursor: pointer;
+    }
+
+    .movie p {
+      font-size: 16px;
+      line-height: 1.6;
+      margin-top: 10px;
+      color: #cccccc;
+    }
+
+    hr {
+      border: 1px solid #e94560;
+      margin: 30px 0;
+    }
+  </style>
+</head>
+
+<body bgcolor="#1a1a2e">
+
+  <!-- Canvas Banner -->
+  <div style="text-align: center; background-color: #0f0f1a;">
+    <canvas id="banner" width="1000" height="120">
+      [Fallback Message]
+    </canvas>
+  </div>
+
+  <!-- Navigation Bar -->
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="register.html">Register</a>
+    <a href="about.html">About</a>
+  </nav>
+
+  <!-- Movie Trailers -->
+  <div class="page-content">
+
+    <div class="movie">
+      <h2>Mission: Impossible – The Final Reckoning</h2>
+      <a href="https://youtu.be/fsQgc9pCyDU?si=vlSgcCvxE1ih5KPD" target="_blank">
+        <img src="mission_impossible.jpg" alt="Mission Impossible Poster">
+      </a>
+      <p>Ethan Hunt faces his most dangerous mission yet as a rogue AI threatens to rewrite the future. The final chapter in an iconic franchise that will leave you on the edge of your seat.</p>
+    </div>
+
+    <hr>
+
+    <div class="movie">
+      <h2>Avengers: Doomsday</h2>
+      <a href="https://youtu.be/KxbrXE7rB-E?si=3TyIpnzevZaN9aOM" target="_blank">
+        <img src="avenger.jpg" alt="Avengers Doomsday Poster">
+      </a>
+      <p>Earth's mightiest heroes unite once more as Doctor Doom rises to threaten the entire multiverse. A massive Marvel event that changes everything we know about the MCU.</p>
+    </div>
+
+    <hr>
+
+    <div class="movie">
+      <h2>Jurassic World Rebirth</h2>
+      <a href="https://youtu.be/jan5CFWs9ic?si=Tq9UgX-lNofS7bOg" target="_blank">
+        <img src="jurassic.jpg" alt="Jurassic World Rebirth Poster">
+      </a>
+      <p>A new team ventures into a remote jungle where dinosaurs have evolved beyond anything science predicted. Survival instincts are pushed to the absolute limit in this thrilling reboot.</p>
+    </div>
+
+    <hr>
+
+    <div class="movie">
+      <h2>Superman (2025)</h2>
+      <a href="https://youtu.be/Ox8ZLF6cGM0?si=mJ0odnzI6crxaTSZ" target="_blank">
+        <img src="superman.jpg" alt="Superman 2025 Poster">
+      </a>
+      <p>The Man of Steel returns in James Gunn's fresh take on the beloved DC hero. Clark Kent must balance his identity, his values, and the weight of protecting a world that fears him.</p>
+    </div>
+
+    <hr>
+
+    <div class="movie">
+      <h2>Sinners</h2>
+      <a href="https://youtu.be/bKGxHflevuk?si=FTN3YFJLAHXjsD6o" target="_blank">
+        <img src="sinners_ver2.jpg" alt="Sinners Poster">
+      </a>
+      <p>Twin brothers return to their Mississippi Delta hometown only to discover that the evil they tried to escape is far more terrifying than anything they left behind. A genre-defying thriller.</p>
+    </div>
+
+  </div>
+
+  <script>
+
+    ( function ( ) {
+
+      const canvas = document.getElementById( 'banner' )
+
+      if ( canvas.getContext )
+      {
+        const ctx = canvas.getContext( '2d' )
+
+        ctx.fillStyle = '#0f0f1a'
+        ctx.fillRect( 0, 0, 1000, 120 )
+
+        ctx.shadowOffsetX = 4
+        ctx.shadowOffsetY = 4
+        ctx.shadowBlur = 20
+        ctx.shadowColor = 'Black'
+
+        ctx.font = 'italic bold 60px Fantasy'
+        ctx.fillStyle = '#e94560'
+        ctx.fillText( 'Top Movie Trailers Today', 30, 85 )
+      }
+
+    } ) ( )
+
+  </script>
+
+</body>
+</html>
